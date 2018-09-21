@@ -14,5 +14,6 @@ fun todoTask1(collection: Collection<Int>): Nothing = TODO(
 
 
 fun task1(collection: Collection<Int>): String {
-    todoTask1(collection)
+    return collection.foldIndexed("{",
+            {idx, acc, s -> acc + s + if (idx == collection.size - 1) "}" else ", " })
 }
