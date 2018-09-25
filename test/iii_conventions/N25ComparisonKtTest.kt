@@ -23,5 +23,5 @@ class N25ComparisonKtTest {
     }
 
     /* If you declare 'compareTo' as an extension function, remove this one to make the code compile */
-    operator fun MyDate.compareTo(other: MyDate): Int = todoTask25()
+    //operator fun MyDate.compareTo(other: MyDate): Int = todoTask25()
 }
