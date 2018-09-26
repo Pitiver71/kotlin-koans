@@ -20,6 +20,6 @@ class N31InvokeKtTest {
         testInvokable(0) { it }
     }
 
-    operator fun Invokable.invoke(): Nothing = todoTask31()
-    fun Invokable.getNumberOfInvocations(): Nothing = todoTask31()
+    //operator fun Invokable.invoke(): Nothing = invoke()
+    fun Invokable.getNumberOfInvocations(): Int = numberOfInvocations
 }
