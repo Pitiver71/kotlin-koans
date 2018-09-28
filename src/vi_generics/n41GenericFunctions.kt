@@ -1,5 +1,6 @@
 package vi_generics
 
+import iii_conventions.iterateOverDateRange
 import util.TODO
 import java.util.*
 
@@ -19,12 +20,19 @@ fun task41(): Nothing = TODO(
         }
 )
 
+fun <T, C: MutableCollection<T>> partitionTo(src: C, dest: C, f: (el: T ) -> Boolean) : Pair<C, C> {
+
+    src.filter(f)
+    src.filter(f)
+    return Pair(src, dest)
+}
+
 fun List<String>.partitionWordsAndLines(): Pair<List<String>, List<String>> {
-    task41()
-//    return partitionTo(ArrayList<String>(), ArrayList()) { s -> !s.contains(" ") }
+//    task41()
+    return partitionTo(ArrayList<String>(), ArrayList()) { s -> !s.contains(" ") }
 }
 
 fun Set<Char>.partitionLettersAndOtherSymbols(): Pair<Set<Char>, Set<Char>> {
-    task41()
-//    return partitionTo(HashSet<Char>(), HashSet()) { c -> c in 'a'..'z' || c in 'A'..'Z'}
+//    task41()
+    return partitionTo(HashSet<Char>(), HashSet()) { c -> c in 'a'..'z' || c in 'A'..'Z'}
 }
